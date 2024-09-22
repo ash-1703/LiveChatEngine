@@ -57,11 +57,13 @@ Install dependencies:
 npm install
 ```
 Create a .env file for your backend and add your ChatEngine Private Key:
+```
 PRIVATE_KEY=your-chatengine-private-key
-Start the backend server:
-(install a vs code extension rest client)
-create a file name -request.rest
-add the following boiler plate
+```
+*Optional*:
+1. Install a vs code extension *Rest Client*
+2. Create a file 'request.rest'
+3. Add the following boilerplate:
 ```
 POST http://localhost:3001/authenticate
 Content-Type: application/json
@@ -70,7 +72,10 @@ Content-Type: application/json
     "username": "ash-0173"
 }
 ```
-click on submit request to see if you have an update username with temporary password
+4. Click on submit-request to see if you have an updated username with a temporary password
+
+
+Start the backend server:
 ```
 npm run start
 ```
@@ -99,34 +104,29 @@ npm run dev
 Access the App:
 Open your browser and go to http://localhost:3001 to start using the chat application.
 
-##🔧 How It Works
+## 🔧 How It Works
 Backend:
 The backend NodeJS server exposes an /authenticate endpoint that interacts with ChatEngine.io to either fetch or create a user based on the provided username.
 
 Frontend:
 The ReactJS frontend displays two main pages:
+**Auth Page**: Allows users to enter a username to authenticate.
+**Chats Page**: Displays the real-time chat UI, leveraging react-chat-engine-pretty to handle messaging.
 
-Auth Page: Allows users to enter a username to authenticate.
-Chats Page: Displays the real-time chat UI, leveraging react-chat-engine-pretty to handle messaging.
-##🎯 Future Improvements
-Push Notifications: Notify users of new messages when they are not in the app.
-User Profiles: Add more user information like avatars or status messages.
-Message Reactions: Allow users to react to messages with emojis.
-Message Search: Implement a feature to search through chat history.
-##🤝 Contributing
+## 🎯 Future Improvements
+**Push Notifications**: Notify users of new messages when they are not in the app.
+**User Profiles**: Add more user information like avatars or status messages.
+**Message Reactions**: Allow users to react to messages with emojis.
+**Message Search**: Implement a feature to search through chat history.
+
+## 🤝 Contributing
 Contributions are welcome! Feel free to submit a Pull Request or open an Issue.
 
-##📝 License
+## 📝 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-### How to use this:
-
-1. **Demo Section**: Add a GIF or screenshot to showcase how the app looks or behaves. You can upload images directly to your repository and link them in the `📸 Demo` section.
-2. **Replace GitHub Repository Link**: Update the `git clone` command with the actual link to your GitHub repository.
-3. **Replace Environment Variables**: Be sure to replace the placeholders `your-chatengine-private-key` and `your-chatengine-project-id` with your actual values in the `.env` file.
-
 This is now a complete Markdown file ready for GitHub. Let me know if you need further adjustments!
-##Reference
+## Reference
 1. https://chatengine.io/
 2. https://blog.chatengine.io/fullstack-chat/nodejs-reactjs
 3. https://www.npmjs.com/package/react-chat-engine-pretty
